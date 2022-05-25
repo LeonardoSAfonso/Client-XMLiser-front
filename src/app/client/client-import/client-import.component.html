@@ -28,6 +28,8 @@
   </div>
 </div>
 
+<span *ngIf='link' style="margin-left: 180px;">Seu XML: {{link}}</span>
+
 <div style="margin: 'auto';">
   <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
     <div class="upload">

@@ -30,6 +30,8 @@
   </div>
 </div>
 
+<span *ngIf='link' style="margin-left: 180px;">Seu XML: {{link}}</span>
+
 <div id="inputs" class="row center search">
   <input type="text" placeholder="Filtrar Por..." (keyup)="onKey($event)">
   <div class="card-tiny material-icons" (click)="searchTotal()">search</div>

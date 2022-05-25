@@ -30,6 +30,8 @@
   </div>
 </div>
 
+<span *ngIf='link' style="margin-left: 180px;">Seu XML: {{link}}</span>
+
 <div id="inputs" class="row center search">
   <input type="text" placeholder="Data Inicial..." (keyup)="onKeyInitial($event)">
   <input type="text" placeholder="Data Final..." (keyup)="onKeyFinal($event)">
