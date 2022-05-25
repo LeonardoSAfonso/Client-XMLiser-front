@@ -1,0 +1,71 @@
+.action {
+  margin: 2rem auto;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 8px;
+  width: 140px;
+  font-weight: 500;
+  background-color: #009879;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.action-button:focus {
+  outline: 0;
+}
+
+.action-button:hover {
+  transform: scale(1.05);
+}
+
+.upload {
+  margin-top: 30px;
+}
+
+.card-small {
+  height: 4px;
+  width: 100px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.card-small:hover {
+  transform: scale(1.05);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin: auto;
+  width: 200px;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #333
+}

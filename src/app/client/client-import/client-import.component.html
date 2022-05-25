@@ -1,0 +1,41 @@
+<div class="row center">
+  <a class="card-small" routerLink="/client">
+    Nome
+  </a>
+
+  <a class="card-small" routerLink="/client-birthday">
+    Aniversário
+  </a>
+
+  <a class="card-small" routerLink="/client-total">
+    Sum Salario
+  </a>
+
+  <a class="card-small" routerLink="/client">
+    Listar Todos
+  </a>
+
+  <a class="card-small" routerLink="/client-create">
+    Criar Um
+  </a>
+
+  <a class="card-small" routerLink="/client-import">
+    Importar XML
+  </a>
+
+  <div (click)="export()" class="card-small">
+    Exportar XML
+  </div>
+</div>
+
+<div style="margin: 'auto';">
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div class="upload">
+      <input type="file" name="profile" (change)="onFileSelect($event)" />
+    </div>
+    <div class="action">
+      <button class="action-button" type="submit">Upload</button>
+    </div>
+    <span *ngIf="client" style="color: #00981e; font-size: 16px;">{{client}}</span>
+  </form>
+</div>
