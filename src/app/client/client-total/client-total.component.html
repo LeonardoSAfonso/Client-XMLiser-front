@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="row center">
+  <a class="card-small" routerLink="/client">
+    Nome
+  </a>
+
+  <a class="card-small" routerLink="/client-birthday">
+    Aniversário
+  </a>
+
+  <a class="card-small" routerLink="/client-total">
+    Sum Salario
+  </a>
+
+  <a class="card-small" routerLink="/client">
+    Listar Todos
+  </a>
+
+  <a class="card-small" routerLink="/client-create">
+    Criar Um
+  </a>
+
+  <a class="card-small" routerLink="/client-import">
+    Importar XML
+  </a>
+
+  <div (click)="export()" class="card-small">
+    Exportar XML
+  </div>
+</div>
+
+<div id="inputs" class="row center search">
+  <input type="text" placeholder="Filtrar Por..." (keyup)="onKey($event)">
+  <div class="card-tiny material-icons" (click)="searchTotal()">search</div>
+</div>
+<span *ngIf='erro' style="color: red; font-size: 12;">Filtro invalido</span>
+
+
+<div *ngIf="clients">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Filtro</th>
+        <th>Soma Salário</th>
+        <th>Qtde Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td class="word-clamp">{{objectVal(client)}}</td>
+        <td class="word-clamp">{{toMoney(client.sumSalaries)}}</td>
+        <td class="word-clamp">{{client.totalElements}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
