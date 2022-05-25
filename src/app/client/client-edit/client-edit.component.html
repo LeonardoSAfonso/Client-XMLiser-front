@@ -1,0 +1,158 @@
+<div>
+  <div class="row-buttons center">
+    <a class="card-small" routerLink="/client">
+      Nome
+    </a>
+
+    <a class="card-small" routerLink="/client-birthday">
+      Aniversário
+    </a>
+
+    <a class="card-small" routerLink="/client-total">
+      Sum Salario
+    </a>
+
+    <a class="card-small" routerLink="/client">
+      Listar Todos
+    </a>
+
+    <a class="card-small" routerLink="/client-create">
+      Criar Um
+    </a>
+
+    <a class="card-small" routerLink="/client-import">
+      Importar XML
+    </a>
+
+    <div (click)="export()" class="card-small">
+      Exportar XML
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- code here -->
+    <div class="card">
+
+      <form class="card-form">
+        <div class="row">
+          <div class="col">
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.name" value="client.name" name="name"
+                required />
+              <label class="input-label">Nome</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.cpf" value="client.cpf" name="cpf" required />
+              <label class="input-label">CPF</label>
+            </div>
+            <div class="input">
+              <input type="number" class="input-field" [(ngModel)]="client.marital_status" value="client.marital_status"
+                name="marital_status" required />
+              <label class="input-label">Estado Civil</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.father" value="client.father" name="father"
+                required />
+              <label class="input-label">Pai</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.mother" value="client.mother" name="mother" />
+              <label class="input-label">Mãe</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.partner" value="client.partner"
+                name="partner" />
+              <label class="input-label">Conjuge</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.rg" value="client.rg" name="rg" />
+              <label class="input-label">RG</label>
+            </div>
+            <div class="input">
+              <input type="number" class="input-field" [(ngModel)]="client.salary" value="client.salary" name="salary"
+                required />
+              <label class="input-label">Salário</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.kind" value="client.kind" name="kind"
+                required />
+              <label class="input-label">Especie</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.electoral_card" value="client.electoral_card"
+                name="electoral_card" required />
+              <label class="input-label">Titulo de eleitor</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.gender" value="client.gender" name="gender"
+                required />
+              <label class="input-label">Sexo</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.cellphone" value="client.cellphone"
+                name="cellphone" />
+              <label class="input-label">Celular</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.zipcode" value="client.zipcode" name="zipcode"
+                required />
+              <label class="input-label">Cep</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.street" value="client.street" name="street"
+                required />
+              <label class="input-label">Rua</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.number" value="client.number" name="number"
+                required />
+              <label class="input-label">Numero</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.complement" value="client.complement"
+                name="complement" />
+              <label class="input-label">Complemento</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.district" value="client.district"
+                name="district" required />
+              <label class="input-label">Bairro</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.city" value="client.city" name="city"
+                required />
+              <label class="input-label">Cidade</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.email" value="client.email" name="email"
+                required />
+              <label class="input-label">Email</label>
+            </div>
+            <div class="input">
+              <input type="text" class="input-field" [(ngModel)]="client.birthday" value="client.birthday"
+                name="birthday" required />
+              <label class="input-label">Aniversário</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-button">
+
+          <div class="action">
+            <button class="action-button" (click)="updateClient()">Editar</button>
+          </div>
+
+          <div class="action">
+            <button class="action-button-red" (click)="deleteClient()">Excluir</button>
+          </div>
+
+        </div>
+
+
+      </form>
+      <span *ngIf='success' style="color: #009879;">Editado com sucesso</span>
+    </div>
+  </div>
+</div>
