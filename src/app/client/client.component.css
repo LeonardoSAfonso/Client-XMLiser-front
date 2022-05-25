@@ -1,0 +1,150 @@
+.styled-table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.pagination {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.pagination td {
+  cursor: pointer;
+}
+
+.view {
+  margin: 5px;
+  padding: 0;
+  background-color: #009879;
+  color: white;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.view:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 18px;
+  width: 100px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card-small {
+  height: 4px;
+  width: 100px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.card-small:hover {
+  transform: scale(1.05);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  margin: 15px;
+}
+
+.search input {
+  border-radius: 15px;
+  border: solid #009879;
+  border-width: 2px;
+}
+
+.search div {
+  margin-left: 16px;
+  color: #009879;
+  cursor: pointer;
+}
+
+.word-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #333
+}

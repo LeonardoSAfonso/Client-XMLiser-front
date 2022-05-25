@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="row center">
+  <a class="card-small" routerLink="/client">
+    Nome
+  </a>
+
+  <a class="card-small" routerLink="/client-birthday">
+    Aniversário
+  </a>
+
+  <a class="card-small" routerLink="/client-total">
+    Sum Salario
+  </a>
+
+  <a class="card-small" routerLink="/client">
+    Listar Todos
+  </a>
+
+  <a class="card-small" routerLink="/client-create">
+    Criar Um
+  </a>
+
+  <a class="card-small" routerLink="/client-import">
+    Importar XML
+  </a>
+
+  <div (click)="export()" class="card-small">
+    Exportar XML
+  </div>
+</div>
+
+<span *ngIf='link' style="margin-left: 180px;">Seu XML: {{link}}</span>
+
+
+<div id="inputs" class="row center search">
+  <input type="text" (keyup)="onKey($event)" placeholder="Digite aqui...">
+  <div class="card-tiny material-icons" (click)="searchName()">search</div>
+</div>
+
+
+<div *ngIf="clients">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Criado Em</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>E-mail</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients[0]">
+        <td class="word-clamp" style="min-width: 63px; max-width:63px">{{toLocaleDate(client.createdAt)}}</td>
+        <td class="word-clamp" style="min-width: 222px; max-width:222px;">{{client.name}}</td>
+        <td class="word-clamp" style="min-width: 89px; max-width:89px">{{client.cpf}}</td>
+        <td class="word-clamp" style="min-width: 152px; max-width:152px">{{client.email}}</td>
+        <td><button class="view" (click)="viewOne(client.id)"><span
+              class="material-icons icon">visibility</span></button></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="pagination">
+    <tr>
+      <td (click)="fullBackward()">
+        << </td>
+      <td (click)="backward()">
+        < </td>
+      <td style="text-align:center; cursor: default;">{{page}}</td>
+      <td (click)="forward()">></td>
+      <td (click)="fullForward()">>></td>
+    </tr>
+  </table>
+</div>
