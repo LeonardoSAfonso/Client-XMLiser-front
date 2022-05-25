@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- code here -->
+  <div class="card">
+
+    <form class="card-form">
+      <div class="input">
+        <input type="text" class="input-field" (keyup)="onKeyEmail($event)" required />
+        <label class="input-label">Email</label>
+      </div>
+      <div class="input">
+        <input type="password" class="input-field" (keyup)="onKeyPassword($event)" required />
+        <label class="input-label">Password</label>
+      </div>
+      <div class="action" (click)="login()">
+        <button class="action-button">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
